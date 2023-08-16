@@ -1,0 +1,26 @@
+class Solution {
+public:
+    int maximumWealth(vector<vector<int>>& accounts) {
+        
+        
+        int max{INT_MIN};
+        int sum{0};
+        
+        for(const auto &v1 : accounts)
+        {
+
+            for(const auto &v2 : v1)
+            {
+                sum+=v2;
+            }
+            
+            if(max<sum)
+            {
+                max = sum;
+                
+            }
+            sum=0;
+        }
+        return max;
+    }
+};
