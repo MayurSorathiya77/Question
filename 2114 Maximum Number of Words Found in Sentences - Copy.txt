@@ -1,0 +1,16 @@
+class Solution {
+public:
+    int mostWordsFound(vector<string>& sentences) {
+        
+        int men{1};
+        int maax = INT_MIN;
+        
+       for(auto &v1 : sentences)
+       {
+           men = count(v1.begin(),v1.end(),' ');
+          maax =  max(maax,men+1);
+       }
+        return maax;
+        
+    }
+};
